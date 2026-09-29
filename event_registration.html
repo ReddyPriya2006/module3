@@ -1,0 +1,87 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .form {
+            background-color: white;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form">
+        <h2>Event Registration</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <input type="tel" id="phone" placeholder="Enter Phone Number">
+
+        <select id="event">
+            <option value="">Select Event</option>
+            <option>Hackathon</option>
+            <option>Workshop</option>
+            <option>Technical Symposium</option>
+            <option>Cultural Event</option>
+        </select>
+
+        <input type="date" id="date">
+
+        <button onclick="register()">Register</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function register() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let event = document.getElementById("event").value;
+            let date = document.getElementById("date").value;
+
+            if (name == "" || email == "" || phone == "" ||
+                event == "" || date == "") {
+
+                document.getElementById("message").innerHTML =
+                    "Please fill all fields";
+                document.getElementById("message").style.color = "red";
+            }
+            else {
+                document.getE
+```

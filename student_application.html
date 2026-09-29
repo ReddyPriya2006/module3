@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Application</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .form {
+            background-color: white;
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form">
+
+        <h2>Student Application</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>MCA</option>
+        </select>
+
+        <br>
+
+        <button onclick="submitForm()">Submit</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        function submitForm() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let course = document.getElementById("course").value;
+
+            if (name == "" || email == "" || age == "" || course == "") {
+```
